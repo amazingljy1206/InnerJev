@@ -6,4 +6,4 @@ if (( $# < 3 )); then
 fi
 model="$1"; input="$2"; output="$3"; shift 3
 python -m innerjev.infer --model "$model" --input "$input" --output "$output" \
-  --gpus 2 --precision nf4 --gpu-memory 20GiB --batch-size 1 "$@"
+  --gpus 2 --precision int8 --gpu-memory 20GiB --batch-size 1 "$@"

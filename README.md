@@ -51,7 +51,7 @@ bash scripts/infer_27b_dual_4090.sh jylin001206/InnerJev-27B-Full examples/decis
 | 4B / one 24-GB RTX 4090 | BF16 | One model |
 | 4B / two 24-GB RTX 4090 | BF16 | Independent replicas; outputs merged in input order |
 | 27B / one 24-GB RTX 4090 | NF4 with double quantization | One quantized model |
-| 27B / two 24-GB RTX 4090 | NF4, optionally `--precision int8` | Model layers sharded across GPUs |
+| 27B / two 24-GB RTX 4090 | INT8, optionally `--precision nf4` | Model layers balanced across GPUs |
 
 27B BF16 weights exceed the aggregate memory of two 24-GB cards. NF4/INT8 change the
 numerical inference path, so the BF16 benchmark scores must not be reported as quantized results.

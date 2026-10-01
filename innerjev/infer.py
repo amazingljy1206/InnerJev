@@ -27,7 +27,7 @@ class DecisionEngine:
             if not torch.cuda.is_available() or torch.cuda.device_count() < max(gpus, gpu_index+1):
                 raise RuntimeError('The requested CUDA devices are not available.')
             torch.cuda.set_device(gpu_index)
-            mapping = {'': gpu_index} if gpus == 1 else 'auto'
+            mapping = {'': gpu_index} if gpus == 1 else 'balanced'
             memory = None if gpus == 1 else {i: gpu_memory for i in range(gpus)}
         config = AutoConfig.from_pretrained(model_path)
         cls = Qwen3_5ForConditionalGeneration if config.model_type == 'qwen3_5' else Qwen3_5ForCausalLM
