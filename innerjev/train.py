@@ -114,7 +114,7 @@ def main():
         writer = SummaryWriter(output / 'tensorboard')
         save_json(output / 'training_config.json', dict(**cfg, planned_steps=planned_steps))
     entries = []
-    dev_order = sorted(range(len(dev)), key=lambda i: (dev_lengths[i], dev[i].get('validation_order', dev[i]['id'])))
+    dev_order = sorted(range(len(dev)), key=lambda i: (dev_lengths[i], dev[i].get('ordering_key', dev[i]['id'])))
     evaluate_steps = {math.ceil(planned_steps*i/10) for i in range(1, 11)} | {total}
 
     def encode(part):
