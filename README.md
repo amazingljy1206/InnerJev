@@ -134,6 +134,8 @@ python scripts/merge_lora.py --base Qwen/Qwen3.5-4B   --adapter outputs/4B-LoRA/
 
 The merge supports CPU or CUDA and exports complete BF16 safetensors.
 
+Release validation: [model/data integrity and inference checks](docs/VALIDATION.md).
+
 ## Data repositories
 
 - https://huggingface.co/datasets/jylin001206/InnerJev-4B-Training-Data
