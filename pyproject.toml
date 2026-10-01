@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "innerjev"
+version = "1.0.0"
+description = "InnerJev decision inference and same-size distribution distillation"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "torch==2.8.0",
+  "transformers==5.14.1",
+  "peft==0.21.0",
+  "accelerate==1.10.1",
+  "safetensors==0.8.0",
+  "huggingface-hub>=1.0,<3",
+  "tensorboard==2.20.0",
+]
+
+[project.optional-dependencies]
+quantization = ["bitsandbytes==0.47.0"]
+data = ["datasets>=4.0", "pyarrow>=21"]
+
+[tool.setuptools.packages.find]
+include = ["innerjev*"]

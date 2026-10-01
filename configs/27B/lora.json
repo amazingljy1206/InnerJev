@@ -1,0 +1,21 @@
+{
+  "method": "lora",
+  "base_model": "Qwen/Qwen3.8-27B",
+  "dataset": "jylin001206/InnerJev-27B-Training-Data",
+  "training_rows": 39279,
+  "seed": 42,
+  "lr": 5e-05,
+  "micro": 2,
+  "gpus": 4,
+  "epochs": 1,
+  "checkpoint_steps": 492,
+  "max_input_tokens": 6000,
+  "trainable_parameters": 400556032,
+  "type_weights": {
+    "choice": 1.0,
+    "noul": 1.1666667,
+    "score": 0.8
+  },
+  "modules": "configs/27B/modules.json",
+  "base_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0"
+}

@@ -1,0 +1,21 @@
+{
+  "method": "full",
+  "base_model": "Qwen/Qwen3.5-4B",
+  "dataset": "jylin001206/InnerJev-4B-Training-Data",
+  "training_rows": 29326,
+  "seed": 43,
+  "lr": 2e-06,
+  "micro": 4,
+  "gpus": 4,
+  "epochs": 1,
+  "checkpoint_steps": 459,
+  "max_input_tokens": 6000,
+  "trainable_parameters": 3313500160,
+  "type_weights": {
+    "choice": 1.0,
+    "noul": 1.1666667,
+    "score": 0.8
+  },
+  "modules": "configs/4B/modules.json",
+  "base_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a"
+}
