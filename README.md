@@ -18,6 +18,27 @@ Scores use equal weight across the fixed 58-benchmark decision suite and refer t
 BF16 checkpoints. LoRA scores were measured with the adapter before BF16 merging;
 the released LoRA models contain merged weights. Quantized scores are not implied by this table.
 
+## Hosted API access
+
+We provide hosted **InnerJev-27B-Full** and **InnerJev-4B-Full** APIs powered by
+vLLM in BF16 (without quantization), so you can try both models without deploying them locally.
+
+To request a personal API key, complete the
+**[API access request form / API 访问申请](https://sii-czxy.feishu.cn/share/base/form/shrcnq2Pf9zBkUe1jFiHBjgUaxe)**
+or scan the QR code below. After manual review and approval, we will email your
+API key, endpoint URLs, and usage instructions.
+
+<p>
+  <a href="https://sii-czxy.feishu.cn/share/base/form/shrcnq2Pf9zBkUe1jFiHBjgUaxe">
+    <img src="docs/assets/api-access-qr.png" alt="Scan to apply for InnerJev API access / 扫码申请 API key" width="280">
+  </a>
+</p>
+
+Each key defaults to **60 inference requests per rolling minute**, **1,000 per UTC day**,
+and a **30-day validity period**. Limits are shared across both models; you may reapply
+after expiry. Requests require `Authorization: Bearer <API_KEY>`.
+The current trial endpoints use HTTP: do not submit sensitive data or share your key.
+
 ## Install
 
 ```bash
