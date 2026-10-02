@@ -27,11 +27,8 @@ pip install -e '.[quantization,data]'
 ```
 
 Python 3.10+ and a CUDA-compatible PyTorch installation are required for GPU execution.
-Until the repositories are made public, authenticate with an account that can access them:
-
-```bash
-hf auth login
-```
+The released model and training-data repositories are public and can be downloaded
+without signing in to Hugging Face.
 
 ## RTX 4090 inference
 
@@ -142,4 +139,4 @@ Release validation: [model/data integrity and inference checks](docs/VALIDATION.
 - https://huggingface.co/datasets/jylin001206/InnerJev-27B-Training-Data
 
 Model/code license: Apache-2.0. Dataset source materials retain their upstream terms;
-see the dataset cards and inventories. Repository contents are initially private.
+see the dataset cards and inventories.

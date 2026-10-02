@@ -4,6 +4,14 @@ All four standalone model folders were loaded with the supplied decision engine 
 Each model completed three synthetic questions covering Choice, Noul and Score; the
 returned probability vectors were finite, correctly sized, and normalized.
 
+All four published Hugging Face repository IDs also passed anonymous metadata and
+weight-download access checks. Each cached weight file was hashed in full and matched
+the remote SHA-256 value; every remote weight shard's downloaded byte prefix matched
+the export. Configurations and tokenizer files were downloaded anonymously.
+The standard `from_pretrained` path then loaded each repository in BF16 on CPU using
+that verified cache. No separate base model or adapter was required; no missing or
+mismatched weights were reported. All four models completed the three decision tasks.
+
 The two datasets passed JSONL and Arrow validation. Their rendered prompts, teacher
 targets, baseline distributions, and deterministic training batch order match the
 inputs used to train the released checkpoints. The loss implementation and the
